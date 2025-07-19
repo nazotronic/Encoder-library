@@ -123,6 +123,20 @@ bool Encoder::isRightH(bool saveFlag) {
 	return false;
 }
 
+bool Encoder::getTurn(bool saveFlag) { // direction (1: right 0: left)
+	if (!isTurn()) {
+		return false;
+	}
+
+	bool turn = isRight(true);
+
+	if (!saveFlag) {
+		deleteTurn();
+	}
+
+	return turn;
+}
+
 void Encoder::deleteTurns() {
     encFlagsBuffer = 0;
     turnsCounter = 0;

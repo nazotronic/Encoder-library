@@ -107,6 +107,7 @@ public:
 	bool isRight(bool saveFlag = false);
 	bool isLeftH(bool saveFlag = false);
 	bool isRightH(bool saveFlag = false);
+	bool getTurn(bool saveFlag = false);
 
 	void deleteTurns();
 
